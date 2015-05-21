@@ -1,42 +1,78 @@
 blanco = #fff
 gris = #566C7F
 azul = #22A1E7
-negrobase =#151A1E
+negro = #151A1E
+texto = "futura-pt"
+titulo = "proxima-nova"
+
 body
-	h2
-		font-size 36px
-	h3
-		font-size 21px	
-header
-	height 106px
-	aside
-		float right
-		margin-top -35px
-		font-size 10px
-nav
-	float right
-	color gris
-	height 106px
-	margin-top -111px
-nav ul li
-	display inline-block
-	height 106px
-	padding 20px 10px 10px 10px
 	font-size 16px
-aside li
-	display block
-aside ul
-	margin-top -5px	
+	font-family texto
+	font-weight 400
+header
+	height 6.625em
+	position relative
+	aside
+		position absolute
+		right 0
+		top 2em
+		div
+			background url("../img/iconos.svg")
+			background-position -13.5px -136px
+			height: 29px
+			position absolute
+			right 7em
+			top 1.1em
+			width 19px
+		ul
+			list-style-type none
+			
+			li
+				 font-size 0.8em
+				 color gris 			 
+	nav
+		color gris
+		position absolute
+		right 0
+		top -2.46em
+		ul 
+			li
+				-moz-transition:All 0.886s ease;
+				-o-transition:All 0.886s ease;
+				-webkit-transition:All 0.886s ease;
+				box-sizing border-box
+				display inline-block
+				font-size 1.25em
+				font-weight 300
+				height 6.44em
+				padding 1em 0 0 0
+				text-align center
+				transition:All 0.886s ease;
+				width 3.9375em
+				&:hover
+					background gris
+					color blanco
+				&:last-child
+					background azul
+					border-radius 4px
+					box-sizing border-box
+					color blanco
+					font-weight 400
+					height 2.25em
+					margin 0
+					padding .5em 1.5em
+					width 8.75em
+							
 button 
-	color blanco
-	width 80%
-	height 40px
-	text-align center
-	margin-top 10px
-	padding 5px 10px 5px 10px
-	background-color azul
-	border-radius 3px
+	background azul
 	border 0
+	border-radius 3px
+	color blanco
+	height 40px
+	padding .5em 1.5em
+	text-align center
+	text-transform uppercase
+	width 100%
 footer
 	display inline-block
 	width 100%
@@ -47,36 +83,71 @@ footer
 		font-size 32px
 	h4
 		font-size 34px	
-	ul li
-		display block
-		text-align left
-	ul li img
-		margin 10px 10px 0 0			
+	ul 
+		li
+			display block
+			text-align left
+	ul 
+		li 
+			img
+				margin 10px 10px 0 0			
 #aliados
-	display block
-	background-color negrobase
+	background negro
 	color blanco
-	float left
 	width 100%
 	text-align center
-	padding 5% 0px 7% 0px
+	padding 2.75em 0
+	h2
+		font-size 2.25em
+		font-weight 400
+		text-transform uppercase
+		margin 0
+		
 	img
 		margin 5% 4% 0px 4%
 #beneficios
 	color gris
-	display block
-	float left
-	width 100%
-	font-size 15px
+	font-size 1em
+	padding 2.25em 0
+	position relative
+	background blanco
+	height 29em
+	box-sizing border-box
+	.uno,.dos,.tres
+		height 107px
+		width 106px
+	.uno
+		background-position -6px -12px
+	.dos
+		background-position -138px -10px	
+	.tres
+		background-position -268px -12px
+	article
+		display inline-block
+		float left
+		margin 5% 3% 10% 3%	
+		text-align center
+		width 27%
+		&:last-child
+			margin 5% 0 10% 3%	
+			
 	h3
-		font-size 21px
+		font-size 1.31253em
+		font-weight 400
 #clientes
 	display block
-	float left
 	width 100%
 	text-align center
 	color gris
-	padding 2% 0 7% 0
+	padding 2.75em 0
+	h2
+		font-size 2.25em
+		font-weight 400
+		text-transform uppercase
+		margin 0
+	h3
+		font-size 1.31253em
+		font-weight 400
 	span
 		font-size 21px
 	article
@@ -100,11 +171,43 @@ footer
 	blockquote
 		text-align left										
 #presentacion
-	img
-		float left
-		z-index -0009
-		width 100%	
-		margin-top -375px
+	background url("../img/familia-seguros.png") no-repeat
+	background-size cover
+	box-sizing border-box
+	height 32rem
+	padding 6.5em 0 0 0
+	position relative
+	top 0
+	article
+		width 23%
+		text-align center
+		color gris
+	h2
+		font-family titulo
+		font-size 3.4375rem
+		font-weight 400
+		margin 0
+		text-align center
+		text-transform uppercase
+		span
+			font-weight 700
+			font-size 3.72rem
+			top -.45em
+			position relative
+	h3
+		font-size 1.125em
+		margin 0
+		font-family titulo
+		font-weight 400
+		margin -1em 0 1em 0 
+	
+	
+// Que rayos es esto?
+	// img
+	// 	float left
+	// 	z-index -0009
+	// 	width 100%	
+	// 	margin-top -375px
 #formulario
 	background-color blanco
 	width 40%
@@ -112,22 +215,29 @@ footer
 	float left
 	margin-top 60px		
 #soluciones
-	float left
-	width 100%
 	color gris
 	text-align center
-	padding 5% 0 1% 0
+	padding 2.75em 0
 	article
-		float left
 		text-align left
-		margin 7% 7% 0 15%
-		width 70%
+		margin 2em auto 3em
+		display block
+		width 56%
 		div
-			width 60px
-			height 90px
-			margin 20px 20px 0 0
-			float left
 			display inline-block
+			float left		
+	h2
+		font-size 2.25em
+		font-weight 400
+		text-transform uppercase
+		margin 0	
+	h3
+		font-size 1.3125em
+		font-weight 300
+		margin 0
+	p
+		width 100%
+		margin 0
 	button
 		width 30%	
 		margin 10% 
@@ -141,12 +251,7 @@ footer
 	height 106px
 	background-color #D8D8D8
 	margin-left 20%						
-.articulo1
-	display inline-block
-	text-align center
-	width 27%
-	float left
-	margin 5% 3% 10% 3%	
+
 .articulo2
 	display inline-block
 	width 100%	
@@ -170,24 +275,39 @@ footer
 	margin auto
 	position relative	
 	
-.phone
-	width 20px
-	float left	
-.text1
-	width 36%
-	margin-top 10%
-	text-align center
-	color gris
-	span
-		font-size 58px
-	h2
-		font-size 55px
-	h3
-		font-size 18px	
+
+.icono
+	background url("../img/iconos.svg")
+	display block
+	margin 0 auto
+	
+.persona
+	background-position -196.5px -140px
+	height 45px	
+	left 0
+	margin 0 1.1875em 1em 0
+	position relative
+	width 59px
+		
+.empresa
+	background-position -110px -134.48px
+	height 60px	
+	left 0
+	margin 0 1.1875em 1em 0
+	position relative
+	width 59px 	
+
+			
+	
+
+
 .img-back
 	width 100%
 	float left
 	z-index -9
 	margin-top -600px
 	img
-		width 100%					
+		width 100%
+		
+.clear
+	clear both					
